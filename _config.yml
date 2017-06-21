@@ -1,0 +1,17 @@
+gems: ['jekyll/scholar']
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: year
+  order: ascending
+
+  source: publications
+  bibliography: references.bibtex
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*" 

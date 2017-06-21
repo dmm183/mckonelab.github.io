@@ -1,0 +1,45 @@
+---
+layout: default
+title: Research
+---
+
+<div id="about">
+            <div class="container content-lg">
+                <div class="row research-row">
+                    <h1>Research Topics</h1>
+                </div>
+                
+                {% for post in site.posts %}
+                {% for tag in post.tags %}
+                {% if tag == 'research' %}
+                
+                <div class="row research-row">
+                 
+                    <div class="col-sm-7 sm-margin-b-30">
+                        <div class="margin-b-60">
+                            
+                                <h2>{{ post.title }}</h1>
+                            <p>{{ post.description }}</p>
+                            
+                        </div>
+                        
+
+                    </div>
+                    
+                    <div class="col-sm-5">
+                        
+                        <img class="research-img" src="{{ post.image }}">
+                    
+                    </div>
+                    
+                    
+                    
+                </div>
+                <!--// end row -->
+                
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                
+            </div>
+        </div>

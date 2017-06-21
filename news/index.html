@@ -1,0 +1,50 @@
+---
+layout: default
+title: News
+---
+<!--News-->
+        
+        <div id="about">
+            <div class="container content-lg">
+                <div class="row news-row">
+                    <div class="col-sm-3 sm-margin-b-30">
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">News</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-1">
+                        <div class="margin-b-60">
+                            <div class="news-posts-container">
+                                
+                                <ul class="entries">
+                                  {% for post in site.posts %}
+                                    {% for tag in post.tags %}
+                                     {% if tag == 'news' %}                                   
+                                  <li>
+                                      
+                                    <a href="{{ post.url }}">
+                                      <img src="{{ post.image }}" />
+                                      <h3  class="news-entry">{{ post.title }}</h3>
+                                    </a>
+                                  </li>
+                                    
+                                    
+                                    {% endif %}
+                                    {% endfor %}
+                                  {% endfor %}
+                                </ul>
+                                
+                            </div>
+                            
+                        </div>
+                        
+
+                    </div>
+                    
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+            
+<!-- End News -->
+

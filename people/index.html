@@ -1,0 +1,77 @@
+---
+layout: default
+title: People
+---
+<div id="gallery">
+    <div class="container content-lg">
+        <div class="row people-row">
+            <div class="col-sm-1 sm-margin-b-30">
+                <div class="text-right sm-text-left">
+                    <h2 class="margin-b-0">People</h2>
+                </div>
+            </div>
+            <div class="col-sm-10 col-sm-offset-1">
+                <!-- Masonry Grid -->
+                <div class="masonry-grid row row-space-2">
+                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+                    
+                        
+                        {% for post in site.posts %}
+                        {% for tag in post.tags %}
+                        {% if tag == 'people' %}
+                    
+                    <!-- Person -->
+                        <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-6 margin-b-4">
+                        
+                        <div class="work work-popup-trigger">
+                            <div class="work-overlay">
+                                <img class="full-width img-responsive" src="{{ post.image }}" alt="Portfolio Image">
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content">
+                                    <a href="javascript:void(0);" class="work-popup-close">Hide</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">{{ post.title }}</h3>
+                                        <span>{{ post.level }}</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>
+                                                    {{ post.bio }}
+                                                </p>
+<!--
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+                                                </ul>
+-->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p class="margin-b-5"><strong>Email:</strong> {{ post.email }}</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- End Person -->
+                        
+                        {% endif %}
+                        {% endfor %}
+                        {% endfor %}
+                        
+                        
+                    
+                </div>
+                <!-- End Masonry Grid -->
+            </div>
+        </div>
+    </div>
+</div>
+                
